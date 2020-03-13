@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/centre_background"
+    android:focusableInTouchMode="true"
+    tools:context=".JalanActivity">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:id="@+id/imageView1"
+        android:cropToPadding="false"
+        tools:ignore="ContentDescription"
+        android:layout_marginTop="10dp"
+        android:adjustViewBounds="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:id="@+id/imageViewgone"
+        android:cropToPadding="false"
+        tools:ignore="ContentDescription"
+        android:background="@android:drawable/ic_menu_report_image"
+        android:layout_marginTop="10dp"
+        android:adjustViewBounds="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/centre_button"
+        android:layout_below="@id/imageView1"
+        android:onClick="captureImage"
+        android:text="Klik di Sini untuk Memotret Foto Jalan"
+        android:textColor="@color/whiteTextColor"
+        android:visibility="visible"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="325dp"
+        android:layout_marginTop="265dp"
+        style="@style/centreLocatorCardDesign"
+        android:padding="100dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="textlat"
+            android:id="@+id/textLat"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentLeft="true"
+            android:textSize="13dp"
+            android:layout_marginLeft="175dp"
+            android:layout_alignParentStart="true" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="textlong"
+            android:id="@+id/textLong"
+            android:layout_below="@+id/textView3"
+            android:visibility="visible"
+            android:layout_marginLeft="175dp"
+            android:textSize="13dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvid"
+            android:text="id"
+            android:layout_marginLeft="20dp"
+            android:visibility="gone"
+            android:layout_below="@id/textLong"
+            android:textAlignment="center"
+            android:textSize="18sp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:focusableInTouchMode="false"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtInputName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/textDeskripsi"
+                    style="@style/modifiedEditText"
+                    android:hint="Deskripsi"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtInputEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/textAlamat"
+                    style="@style/modifiedEditText"
+                    android:ems="10"
+                    android:hint="Alamat"
+                    android:inputType="textEmailAddress" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtInputMob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/textKecamatan"
+                    style="@style/modifiedEditText"
+                    android:hint="Kecamatan"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+            <Button
+                android:id="@+id/submitBtn"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:background="@drawable/centre_button"
+                android:text="Kirim"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/whiteTextColor" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvlogin"
+            style="@style/parent"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textColor="@color/themeColor"
+            android:textSize="17sp"
+            android:text="Kembali ke Menu Awal"
+            android:layout_marginTop="280dp"
+            android:onClick="onHomeClick"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
